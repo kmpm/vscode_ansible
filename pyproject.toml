@@ -6,8 +6,11 @@ authors = ["Todor Tsankov <tushe@visdigita.net>"]
 packages = []
 
 [tool.poetry.dependencies]
-python = "^3.9"
-ansible-core = "2.11.9"
+python = "^3.11"
+ansible = "^9.3.0"
+q = "^2.7"
+molecule = "^24.2.0"
+molecule-plugins = {extras = ["docker"], version = "^23.5.3"}
 
 
 [tool.poetry.group.dev.dependencies]

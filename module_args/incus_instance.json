@@ -1,0 +1,15 @@
+{
+    "ANSIBLE_MODULE_ARGS": {
+      "name": "myinstance",
+      "source": {
+        "type": "image",
+        "alias": "debian/12/cloud",
+        "server": "https://images.linuxcontainers.org",
+        "protocol": "simplestreams",
+        "mode": "pull",
+        "allow_inconsistent": false,
+        "state": "absent"
+      }
+    }
+  }
+  

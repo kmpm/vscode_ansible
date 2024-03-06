@@ -5,8 +5,12 @@
 			"name": "vscode_ansible"
 		},
 		{
-			"path": "ansible_collections/hello/world",
-			"name": "hello.world"
+			"path": "ansible_collections/kmpm/incus",
+			"name": "kmpm.incus"
+		},
+		{
+			"path": "ansible_collections/kmpm/dnsmasq",
+			"name": "kmpm.dnsmasq"
 		}
 	],
 	"settings": {
