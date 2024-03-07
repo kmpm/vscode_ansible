@@ -7,7 +7,6 @@
       "ipv6.address": "none"
     },
     "type": "bridge",
-    "state": "absent",
     "_ansible_check_mode": false
   }
 }
