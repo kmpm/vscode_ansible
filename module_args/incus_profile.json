@@ -1,0 +1,16 @@
+{
+  "ANSIBLE_MODULE_ARGS": {
+    "name": "test_profile",
+    "description": "Test profile 2",
+    "devices": {
+      "eth1": {
+        "name": "eth3",
+        "network": "incusbr1",
+        "type": "nic"
+      }
+    },
+    "state": "present",
+    "_ansible_check_mode": false
+  }
+}
+    
