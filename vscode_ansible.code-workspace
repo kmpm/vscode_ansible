@@ -7,10 +7,6 @@
 		{
 			"path": "ansible_collections/kmpm/incus",
 			"name": "kmpm.incus"
-		},
-		{
-			"path": "ansible_collections/kmpm/dnsmasq",
-			"name": "kmpm.dnsmasq"
 		}
 	],
 	"settings": {

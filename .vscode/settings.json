@@ -2,5 +2,10 @@
     "[python]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "ms-python.black-formatter"
-    }
+    },
+    "python.testing.pytestArgs": [
+        "ansible_collections/kmpm/incus/tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
