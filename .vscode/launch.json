@@ -6,13 +6,31 @@
     "configurations": [
         {
             "name": "Debug: Ansible Module",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "module": "plugins.modules.${fileBasenameNoExtension}",
             "console": "internalConsole",
             "args": [
                 "${workspaceFolder}/module_args/${fileBasenameNoExtension}.json"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/ansible_collections/kmpm/incus"
+            },
+            "justMyCode": false
+        },
+        {
+            "name": "Debug: Ansible Inventory",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "module": "ansible",
+            "console": "internalConsole",
+            "args": [
+                "inventory",
+                "-i", "${relativeFileDirname}",
+                "-vvv",
+                "--list"
             ],
             "env": {
                 "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/ansible_collections/kmpm/incus"
