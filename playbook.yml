@@ -1,0 +1,39 @@
+- hosts: localhost
+  connection: local
+  - tasks:
+    - name: create a network
+      incus_network:
+        name: make_me_some_network
+        type: bridge
+        config:
+            ipv4.address: "192.168.42.0/24"
+            ipv4.dhcp: "false"
+            ipv6.address: "none"
+
+    - name: get some info about networks
+      incus_network_info:
+        name: mynetwork # optional name if you want just one network
+        project: default # optional 
+        # target: sometarget # defaults to empty
+      register: netinfo
+
+    - name: create a instance
+      incus_instance:
+        name: mycontainer
+        source: # No default for source. You will need what you need.
+            type: image
+            alias: debian/12/cloud
+            server: "https://images.linuxcontainers.org"
+            protocol: simplestreams
+            mode: pull
+            allow_inconsistent: false
+
+    - name: delete instance
+      incus_instance:
+        name: mycontainer
+        state: absent
+
+    - name: delete network
+      incus_network:
+        name: mynetwork
+        state: absent
